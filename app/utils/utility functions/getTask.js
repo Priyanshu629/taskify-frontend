@@ -1,7 +1,7 @@
 export const getTask = async (editTaskId) => {
   try {
     let response = await fetch(
-      `http://localhost:4000/api/v1/task/getTask/${editTaskId}`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/task/getTask/${editTaskId}`,
       {
         method: "GET",
         headers: {

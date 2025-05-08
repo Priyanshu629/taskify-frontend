@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
 
   const fetchTask = async () => {
     try {
-      let response = await fetch("http://localhost:4000/api/v1/task/getTasks", {
+      let response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/task/getTasks`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export const GlobalProvider = ({ children }) => {
 
   const checkCookie = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/v1/check", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/check`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

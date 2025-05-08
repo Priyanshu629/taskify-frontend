@@ -1,6 +1,6 @@
 export const assignTask = async (assignedTo, taskId) => {
   try {
-    let response = await fetch("http://localhost:4000/api/v1/task/assignTask", {
+    let response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/task/assignTask`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -26,7 +26,7 @@ export default function useAddTask() {
             onSubmit: async (values) => {
 
                 try {
-                    let response = await fetch("http://localhost:4000/api/v1/task/addTask", {
+                    let response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}api/v1/task/addTask`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
